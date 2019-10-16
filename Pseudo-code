@@ -1,0 +1,13 @@
+Create a set of 5 multiple choice questions & answers
+
+have a high score page
+
+have a timer
+
+generate points based on time remaining
+
+have the timer take away 15 seconds when a question is answered incorrectly
+
+when the timer runs out, have the points show and an input for the person to input their initials
+
+have the initials and score add to the high scores page
