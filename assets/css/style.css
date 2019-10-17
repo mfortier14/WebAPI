@@ -1,0 +1,29 @@
+#timer {
+    border: 8px solid black;
+    border-radius: 12px;
+    margin: auto;
+    font-size: 3rem;
+    width: fit-content;
+    color: white;
+    background: blue;
+    display: none;
+}
+
+#question {
+    text-align: center;
+}
+
+#responseDiv {
+    margin: auto;
+    width: 40%;
+}
+
+.response1 {
+    color: white;
+    background: purple;
+    width: fit-content;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 12px;
+    padding: 4px;
+}
+

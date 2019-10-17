@@ -25,4 +25,25 @@ var questions = [
         answer: "for loops"
     }
   ];
+
+  var timer = 60;
+  var Intervalid;
+  var Clock = document.getElementById("timer");
+  document.getElementById("quiz").addEventListener("click", function() {
+      Clock.style.display = "block";
+      Intervalid = setInterval(decrement, 1000);
+      showQuestion();
+  });
   
+  function decrement() {
+    timer--;
+    Clock.textContent = timer;
+    if (timer === 0) {
+      clearInterval(Intervalid);
+      // need more code here 
+    }
+  }
+
+  function showQuestion() {
+    
+  }
