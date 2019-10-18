@@ -27,11 +27,11 @@ var questions = [
   ];
 
   var timer = 60;
-  var Intervalid;
+  var IntervalId;
   var Clock = document.getElementById("timer");
   document.getElementById("quiz").addEventListener("click", function() {
       Clock.style.display = "block";
-      Intervalid = setInterval(decrement, 1000);
+      IntervalId = setInterval(decrement, 1000);
       showQuestion();
   });
   
@@ -39,11 +39,18 @@ var questions = [
     timer--;
     Clock.textContent = timer;
     if (timer === 0) {
-      clearInterval(Intervalid);
+      clearInterval(IntervalId);
       // need more code here 
     }
   }
 
   function showQuestion() {
-    
+    document.getElementById.hide("questionDisplay");
+    document.getElementById("#quiz").click(function(){
+      event.preventDefault();
+      document.getElementById("#questionDisplay");
+
+    })
   }
+
+  var Score = 0;
