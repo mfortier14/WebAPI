@@ -20,7 +20,34 @@
     width: 40%;
 }
 
-.response1 {
+.responseOne {
+    color: white;
+    background: purple;
+    width: fit-content;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.responseTwo {
+    color: white;
+    background: purple;
+    width: fit-content;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.responseThree {
+    color: white;
+    background: purple;
+    width: fit-content;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.responseFour {
     color: white;
     background: purple;
     width: fit-content;
