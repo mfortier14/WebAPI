@@ -44,13 +44,24 @@ var questions = [
     }
   }
 
-  function showQuestion() {
-    document.getElementById.hide("questionDisplay");
-    document.getElementById("#quiz").click(function(){
-      event.preventDefault();
-      document.getElementById("#questionDisplay");
+  var question1 = ("#question");
+  var answers = ("#response1");
 
-    })
-  }
+  function showQuestion() {
+    $(question1).show();
+    $(answers).show();
+   };
 
   var Score = 0;
+
+  $("#quiz").on("click", function(){
+    // for (var i = 0; i < questions.length; i++) {
+    // var questionBtn = $("<button>");
+    // questionBtn.attr("data-question", questions[i]);
+    // questionBtn.appendTo("#questionDisplay");
+    // questionBtn.text(questions[i]);
+    // }
+    $("#questionDisplay").show();
+    console.log("what up");
+    
+  })
