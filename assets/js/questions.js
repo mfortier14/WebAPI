@@ -1,33 +1,34 @@
-// var questions = [
-//     {
-//       title: "Commonly used data types DO NOT include:",
-//       choices: ["strings", "booleans", "alerts", "numbers"],
-//       answer: "alerts"
-//     },
-//     {
-//       title: "The condition in an if / else statement is enclosed within ____.",
-//       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-//       answer: "parentheses"
-//     },
-//     {
-//         title: "Arrays in Javascript can be used to store:",
-//         choices: ["number and strings", "other arrays", "booleans", "all of the above"],
-//         answer: "all of the above"
-//     },
-//     {
-//         title: "String values must be enclosed within ____ when being assigned to variables",
-//         choices: ["commas", "curly brackets", "quotes", "parantheses"],
-//         answer: "curly brackets"
-//     },
-//     {
-//         title: "A very useful tool used during development and debugging for printing content to the debugger is:",
-//         choices: ["Javascript", "terminal/bash", "for loops", "console.log"],
-//         answer: "for loops"
-//     }
-  // ];
+var questions = [
+    {
+      title: "Commonly used data types DO NOT include:",
+      choices: ["strings", "booleans", "alerts", "numbers"],
+      answer: "alerts"
+    },
+    {
+      title: "The condition in an if / else statement is enclosed within ____.",
+      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+      answer: "parentheses"
+    },
+    {
+        title: "Arrays in Javascript can be used to store:",
+        choices: ["number and strings", "other arrays", "booleans", "all of the above"],
+        answer: "all of the above"
+    },
+    {
+        title: "String values must be enclosed within ____ when being assigned to variables",
+        choices: ["commas", "curly brackets", "quotes", "parantheses"],
+        answer: "curly brackets"
+    },
+    {
+        title: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: ["Javascript", "terminal/bash", "for loops", "console.log"],
+        answer: "for loops"
+    }
+  ];
 
   var correctAnswer = "Correct!"
   var wrongAnswer = "Try Again!"
+  var presentQuestion = 0;
 
 // this will set the timer to 60 when the start quiz button is clicked and decrement the timer
   var timer = 60;
@@ -71,20 +72,27 @@
     // if they click the start quiz button, the first question will appear
   });
 
-  $(".choice").click(function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    if (questions[currentQuestion].answer == $(this).val()) {  // is the option they clicked the correct one
-      $(".message").text(correctAnswer);    
-      //  correct messaging to the player if correct option is chosen
-    } 
-    else {
-      $(".message").text(wrongAnswer);      
-      // tell the player the option they chose is wrong 
-      timer = Math.max(timer - penaltyTime, 0); 
-      // take away time on the clock if answer is wrong if greater than 0
-    };  
-    currentQuestion++;                       // increment to next question  
-    renderPage(questions[currentQuestion], currentQuestion); 
 
-  });
+// function questionAnswers() {
+//   for (var i = 0; i < questions.length; i++) {
+//     questions.on("click", answer).text("Correct!");
+//     if ("choices" !== answer) {
+//       alert("Try Again!");
+//     }
+//     else ("choices" === answer); {
+//       alert("Correct!");
+//     };
+//     showQuestion();
+// }
+// }
+
+
+function Question(title, choices, answer) {
+  this.text = text;
+  this.choices = choices;
+  this.answer = answer;
+}
+
+Question.prototype.correctAnswer = function(choices) {
+  return choices === this.answer;
+}
