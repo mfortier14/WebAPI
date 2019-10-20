@@ -66,8 +66,8 @@ var questions = [
   var Score = 0;
 
   $("#quiz").on("click", function(){
-    $("#questionDisplay").show();
-    console.log("#questionDisplay");
+    $("#quizDisplay").show();
+    console.log("#quizDisplay");
     showQuestion();
     // if they click the start quiz button, the first question will appear
   });
@@ -86,13 +86,3 @@ var questions = [
 // }
 // }
 
-
-function Question(title, choices, answer) {
-  this.text = text;
-  this.choices = choices;
-  this.answer = answer;
-}
-
-Question.prototype.correctAnswer = function(choices) {
-  return choices === this.answer;
-}

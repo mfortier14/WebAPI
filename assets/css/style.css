@@ -10,55 +10,52 @@
     margin-right: 100px;
 }
 
-#question {
-    text-align: center;
-    margin-bottom: 20px;
+
+body {
+    background-color: #eeeeee;
 }
 
-#responseDiv {
-    margin: auto;
-    width: 40%;
+.container {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #cbcbcb;
 }
 
-.responseOne {
-    color: white;
-    background: purple;
-    width: fit-content;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 12px;
-    padding: 4px;
+.container #question {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #5a6772;
 }
 
-.responseTwo {
-    color: white;
-    background: purple;
-    width: fit-content;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 12px;
-    padding: 4px;
+.buttons {
+    margin-top: 30px;
 }
 
-.responseThree {
-    color: white;
-    background: purple;
-    width: fit-content;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 12px;
-    padding: 4px;
+.choiceOne, .choiceTwo, .choiceThree, .choiceFour {
+    background-color: #778897;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
 }
 
-.responseFour {
-    color: white;
-    background: purple;
-    width: fit-content;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 12px;
-    padding: 4px;
+#quiz {
+    background-color: #778897;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
 }
 
-#questionDisplay {
-    display: none;
-    text-align: center;
-    
-}
 
