@@ -1,6 +1,6 @@
 var correctAnswer = "Correct!"
   var wrongAnswer = "Try Again!"
-  var presentQuestion = 0;
+
 
 // this will set the timer to 60 when the start quiz button is clicked and decrement the timer
   var timer = 60;
@@ -45,6 +45,6 @@ var correctAnswer = "Correct!"
     // if they click the start quiz button, the first question will appear
   });
   
-$(".buttons").on("click", function(){
-    
-})
+// $(".buttons").on("click", function(){
+//     var btnResponse = $(this.text(questions[i]));
+// })
