@@ -4,6 +4,9 @@ var correctAnswer = "Correct!"
   var currentQuestionIndex = 0;
   var titleA1 = $("question");
   var choicesA1 = $("choice");
+  var timerA1 = $("timer");
+
+  var time = questions.length * 15;
 
 
 
@@ -43,16 +46,16 @@ var correctAnswer = "Correct!"
   var Score = 0;
 
   $("#quiz").on("click", function(){
-    $("#quizDisplay").show();
+    $("#question").show();
     $(".buttons").show();
-    console.log("#quizDisplay");
+    console.log("#question");
     showQuestion();
     // if they click the start quiz button, the first question will appear
   });
   
-// $(".buttons").on("click", function(){
-//     var btnResponse = $(this.text(questions[i]));
-// })
+$(".buttons").on("click", function(){
+    var btnResponse = $(this.text(questions[i]));
+})
 
 function startQuiz() {
     // hide the first question on the first screen
@@ -62,7 +65,7 @@ function startQuiz() {
     // show the questions that were hidden
     questionAl.removeAttribute("class");
 
-    getQuestion();
+    // getQuestion();
 }  
 
 function getQuestion() {
@@ -83,7 +86,7 @@ function getQuestion() {
       choiceItem.attr("class", "choice");
       choiceItem.attr("value", choice);
   
-      choiceNode.text = i + 1 + ". " + choice;
+      choiceNode.text = i + 1 + " " + choice;
   
       // attach click event listener to each choice
       choiceNode.onclick = questionClick;
@@ -91,3 +94,18 @@ function getQuestion() {
       // display on the page
       choicesAl.append(choiceNode);
     })};
+
+    function choiceSelection() {
+        // was the choice selected incorrect?
+        if (this.value !== question[currentQuestionIndex].answer) {
+          // take away 15 seconds if the choice is incorrect
+          time -= 15;
+      
+          if (time < 0) {
+            time = 0;
+          }
+      
+          // display new time on page
+          timerAl.text = time;
+        }
+        }
